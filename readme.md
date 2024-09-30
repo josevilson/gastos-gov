@@ -76,11 +76,3 @@ Contribuições são bem-vindas! Se você tiver sugestões ou correções, por f
 ## Licença
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-"""
-
-# Escrevendo o conteúdo em um arquivo README.md
-file_path = '/mnt/data/README.md'
-with open(file_path, 'w') as file:
-    file.write(readme_content)
-
-file_path
