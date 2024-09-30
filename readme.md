@@ -1,45 +1,86 @@
-Projeto Técnicas de Programação I
-Descrição
-Este notebook contém a descrição do projeto prático do módulo: Técnicas de programação I. Neste projeto aplicaremos as técnicas aprendidas em aula para criarmos uma análise exploratória sobre um conjunto de dados.
+# Criando o conteúdo do README.md
+readme_content = """
+# Análise de Gastos do Cartão Corporativo Federal
 
-Objetivo
-Realizar uma análise exploratória de dados utilizando datasets relacionados ao Brasil. Estruture sua análise criando um storytelling: Uma história contada com informações, gráficos e imagens (opcional) e medidas estatísticas, associando dados a fatos em uma linha do tempo. Você está livre para incluir quantas bases considerar necessário e filtrar as informações mais relevantes para sua história.
+Este repositório contém um notebook que analisa os gastos realizados com o cartão corporativo federal, detalhando as despesas efetuadas pelos servidores públicos. A análise utiliza um dataset contendo informações detalhadas sobre os pagamentos, incluindo o valor gasto, o fornecedor, o tipo de despesa, e outras variáveis relevantes.
 
-Dados
-Esta é uma lista de fontes que vocês podem utilizar. Você está livre para utilizar esta e outras fontes de dados, desde que haja uma concordância prévia com o professor.
+## Objetivo
 
-Fontes de dados sugeridas:
-Covid19br (https://github.com/wcota/covid19br/)
-Agência Nacional de Petróleo e Gás (https://bit.ly/3hf8rbZ)
-DataSUS (ftp.datasus.gov.br)*
-Dados.gov.br (https://bit.ly/3fPA1MO)
-Kaggle (https://www.kaggle.com/)
-*Obs: pode ser acessado por um cliente FTP (Ex.: Filezilla)
+O objetivo deste projeto é fornecer insights sobre como os recursos do cartão corporativo federal estão sendo utilizados, identificar padrões de gastos e analisar a distribuição de despesas por diferentes fornecedores, servidores e tipos de gastos.
 
-Organização e entregáveis
+## Estrutura do Dataset
 
-O projeto completo (Notebook, código-fonte, link para fontes, bases e demais artefatos) deve ser publicado conforme instruções do LMS.
+O dataset utilizado no notebook possui as seguintes colunas:
 
-Critérios de avaliação
-A avaliação será feita com base nos artefatos entregues e na sua apresentação.
-A estrutura abaixo lista sugestões do que pode conter no seu trabalho.
+- **DATA PGTO**: Data em que o pagamento foi efetuado.
+- **CPF SERVIDOR**: Número de CPF do servidor responsável pela transação.
+- **CPF/CNPJ FORNECEDOR**: Número de CPF ou CNPJ do fornecedor.
+- **NOME FORNECEDOR**: Nome do fornecedor responsável pela venda.
+- **VALOR**: Valor da transação.
+- **TIPO**: Tipo de despesa (Ex.: alimentação, transporte, etc.).
+- **SUBELEMENTO DE DESPESA**: Categoria detalhada do tipo de gasto.
+- **CDIC**: Código de Identificação da Despesa Corrente.
+- **DIA PGTO**: Dia em que o pagamento foi efetuado.
+- **MES PGTO**: Mês em que o pagamento foi efetuado.
+- **ANO PGTO**: Ano em que o pagamento foi efetuado.
 
-Apresentação da análise
-Storytelling;
-Insights (padrões que descrevam os elementos da base);
-Descrição do problema;
-Proposta de solução;
-Entregáveis
-Relatório com análise exploratória de dados;
-Descrição das variáveis (Dados faltantes, tipos de dados, informações relacionadas e fontes);
-Limpeza da base
-Análise Univariada e Multivariada
-Medidas estatísticas;
-Comparações;
-Tendências de crescimento ou queda;
-Gráficos (opcional)
-Critérios:
-Análise (O nível de exploração dos dados, quantidade de bases e variáveis);
-Reprodutibilidade (O código será executado e o resultados precisam ser reproduzidos);
-Comunicação (Explique o problema e como a equipe explorou os dados);
-Tempo de apresentação: A depender da quantidade de grupos. (Aproximadamente de 15 ~ 20 minutos)# gastos-gov
+## Análises Realizadas
+
+As análises realizadas no notebook incluem:
+
+1. **Distribuição de Gastos por Servidor**: Identificação dos servidores com maiores volumes de transações.
+2. **Análise de Fornecedores**: Distribuição dos gastos entre diferentes fornecedores e identificação dos principais destinatários dos pagamentos.
+3. **Padrões de Gastos por Período**: Análise das despesas ao longo dos meses e anos para identificar tendências sazonais ou picos de gastos.
+4. **Classificação de Despesas**: Agrupamento dos gastos por categorias (TIPO e SUBELEMENTO DE DESPESA), permitindo uma visão mais granular de como os recursos estão sendo alocados.
+5. **Outliers**: Identificação de valores atípicos que possam indicar gastos excessivos ou anômalos.
+
+## Ferramentas Utilizadas
+
+O notebook foi desenvolvido em Python e utiliza as seguintes bibliotecas principais:
+
+- **Pandas**: Para manipulação e análise de dados.
+- **Matplotlib/Seaborn**: Para visualizações gráficas.
+- **NumPy**: Para operações numéricas.
+- **Jupyter Notebook**: Para a criação do ambiente interativo de análise.
+
+## Como Utilizar
+
+1. Clone este repositório:
+
+    ```bash
+    git clone https://github.com/josevilson/gastos-gov.git
+    ```
+
+2. Instale as dependências:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Execute o notebook `gastos_cartao_corporativo.ipynb` em um ambiente Jupyter:
+
+    ```bash
+    jupyter notebook gastos_cartao_corporativo.ipynb
+    ```
+
+## Próximos Passos
+
+- Implementar um modelo de predição para identificar padrões futuros de gastos.
+- Analisar a relação entre categorias de despesas e o valor total dos gastos.
+- Explorar possíveis correlações entre os servidores e os fornecedores frequentes.
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você tiver sugestões ou correções, por favor, abra uma issue ou faça um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+"""
+
+# Escrevendo o conteúdo em um arquivo README.md
+file_path = '/mnt/data/README.md'
+with open(file_path, 'w') as file:
+    file.write(readme_content)
+
+file_path
