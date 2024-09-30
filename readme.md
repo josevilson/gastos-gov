@@ -1,4 +1,3 @@
-# Criando o conteúdo do README.md
 
 # Análise de Gastos do Cartão Corporativo Federal
 
