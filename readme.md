@@ -1,5 +1,5 @@
 # Criando o conteúdo do README.md
-readme_content = """
+
 # Análise de Gastos do Cartão Corporativo Federal
 
 Este repositório contém um notebook que analisa os gastos realizados com o cartão corporativo federal, detalhando as despesas efetuadas pelos servidores públicos. A análise utiliza um dataset contendo informações detalhadas sobre os pagamentos, incluindo o valor gasto, o fornecedor, o tipo de despesa, e outras variáveis relevantes.
